@@ -14,17 +14,205 @@
 </head>
 
 <body>
-    
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <div class="container">
+        <h2>Survey Questions</h2>
+        <hr>
+        <h3>About You</h3>
+        <label>Name (Required)</label>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" id="nameInput">
+        </div>
+        <label>Link to Photo Image (Required)</label>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" id="photoInput">
+        </div>
+        <hr>
+
+        <div id="surveyList"></div>
+
+        <!-- <div class="form-group">
+            <h3>Question 1</h3>
+            <label for="exampleFormControlSelect1">Your mind is always buzzing with unexplored ideas and
+                plans.</label>
+            <select class="form-control" id="formSelect1">
+                <option>Select One</option>
+                <option>1 (Strongly Disagree)</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5 (Strongly Agree)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <h3>Question 2</h3>
+            <label for="exampleFormControlSelect1">Generally speaking, you rely more on your experience than your
+                imagination.</label>
+            <select class="form-control" id="formSelect2">
+                <option>Select One</option>
+                <option>1 (Strongly Disagree)</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5 (Strongly Agree)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <h3>Question 3</h3>
+            <label for="exampleFormControlSelect1">You find it easy to stay relaxed and focused even when there is
+                some
+                pressure.</label>
+            <select class="form-control" id="formSelect3">
+                <option>Select One</option>
+                <option>1 (Strongly Disagree)</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5 (Strongly Agree)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <h3>Question 4</h3>
+            <label for="exampleFormControlSelect1">You rarely do something just out of sheer curiosity.</label>
+            <select class="form-control" id="formSelect4">
+                <option>Select One</option>
+                <option>1 (Strongly Disagree)</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5 (Strongly Agree)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <h3>Question 5</h3>
+            <label for="exampleFormControlSelect1">People can rarely upset you.</label>
+            <select class="form-control" id="formSelect5">
+                <option>Select One</option>
+                <option>1 (Strongly Disagree)</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5 (Strongly Agree)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <h3>Question 6</h3>
+            <label for="exampleFormControlSelect1">It is often difficult for you to relate to other people’s
+                feelings.</label>
+            <select class="form-control" id="formSelect6">
+                <option>Select One</option>
+                <option>1 (Strongly Disagree)</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5 (Strongly Agree)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <h3>Question 7</h3>
+            <label for="exampleFormControlSelect1">In a discussion, truth should be more important than people’s
+                sensitivities.</label>
+            <select class="form-control" id="formSelect7">
+                <option>Select One</option>
+                <option>1 (Strongly Disagree)</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5 (Strongly Agree)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <h3>Question 8</h3>
+            <label for="exampleFormControlSelect1">You rarely get carried away by fantasies and ideas.
+            </label>
+            <select class="form-control" id="formSelect8">
+                <option>Select One</option>
+                <option>1 (Strongly Disagree)</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5 (Strongly Agree)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <h3>Question 9</h3>
+            <label for="exampleFormControlSelect1">You think that everyone’s views should be respected regardless of
+                whether they are supported by facts or not.</label>
+            <select class="form-control" id="formSelect9">
+                <option>Select One</option>
+                <option>1 (Strongly Disagree)</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5 (Strongly Agree)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <h3>Question 10</h3>
+            <label for="exampleFormControlSelect1">You feel more energetic after spending time with a group of
+                people.
+            </label>
+            <select class="form-control" id="formSelect10">
+                <option>Select One</option>
+                <option>1 (Strongly Disagree)</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5 (Strongly Agree)</option>
+            </select>
+        </div> -->
+
+        <button type="button" class="btn btn-primary btn-lg btn-block">Find A Match 😏</button>
+        <hr>
+        <p><a href='/api/friends'>API Friends List</a> | <a href='#'>GitHub Repo</a></p>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    <script>
+        var questions = [
+            'Your mind is always buzzing with unexplored ideas and plans.',
+            'Generally speaking, you rely more on your experience than your imagination..',
+            'You find it easy to stay relaxed and focused even when there is some pressure.',
+            'You rarely do something just out of sheer curiosity.',
+            'People can rarely upset you.',
+            'It is often difficult for you to relate to other people’s feelings.',
+            'In a discussion, truth should be more important than people’s sensitivities.',
+            'You rarely get carried away by fantasies and ideas.',
+            'You think that everyone’s views should be respected regardless of whether they are supported by facts or not.',
+            'You feel more energetic after spending time with a group of people.',
+        ];
+
+        var questionNumber = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
+        var surveyList = $('#surveyList');
+        var appendQuestions = '';
+        var appendQuestionNumber = '';
+        for (var i = 0; i < questionNumber.length && questions.length; i++) {
+            appendQuestionNumber = questionNumber[i];
+            appendQuestions = questions[i];
+            var myForm = `<div class="form-group">` +
+            `<h2>Question ${appendQuestionNumber}</h2>` +
+            `<h4>${appendQuestions}</h4>` +
+            `<select class="form-control" id="formSelect">` +
+            `<option>Select One</option>` +
+            `<option>1 (Strongly Disagree)</option>` +
+            `<option>2</option>` +
+            `<option>3</option>` +
+            `<option>4</option>` +
+            `<option>5 (Strongly Agree)</option>` +
+            `</select>` +
+            `</div>`
+            surveyList.append(myForm)
+        };
     </script>
 </body>
 
