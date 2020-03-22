@@ -40,11 +40,49 @@
 
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    <div class="modal" id="result-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">You found a Friend!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h2 id="matchName"></h2>
+                    <img src="" id="matchImg">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Send Request</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js">
     </script>
 
+
     <script>
+        //clear form
+        function clearForm() {
+            $('#nameInput').val('')
+            $('#photoInput').val('')
+            $('#q1').val('')
+            $('#q2').val('')
+            $('#q3').val('')
+            $('#q4').val('')
+            $('#q5').val('')
+            $('#q6').val('')
+            $('#q7').val('')
+            $('#q8').val('')
+            $('#q9').val('')
+            $('#q10').val('')
+        };
+
         // Dynamically render form
         function renderForm() {
             var questions = [
@@ -121,7 +159,16 @@
                         $('#q10').val()
                     ]
                 };
-            };
+
+                $.post("/api/friends", surveyData, function (data) {
+                    $("#matchName").text(data.name);
+                    $("#matchImg").attr("src", data.photo);
+                    $("#result-modal").modal("toggle");
+                    clearForm();
+                });
+            } else {
+                alert("Please fill out the whole form!");
+            }
         });
     </script>
 
