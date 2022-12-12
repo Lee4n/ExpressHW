@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/Lee4n/ExpressHW#readme",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "node": "^13.10.1",
     "path": "^0.12.7"
   }
